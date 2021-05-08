@@ -1,34 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { dbService } from '../myFirebase';
 
+// import JsonFactory from '../components/JsonFactory';
+import JsonEditor from '../components/JsonEditor';
+import Json from '../components/Json';
+
 const Home = ({ userObj }) => {
-  const [tweets, setTweets] = useState([]);
+  const [jsons, setJsons] = useState([]);
 
   useEffect(() => {
     dbService
-      .collection('tweets')
+      .collection('jsons')
       .orderBy('createdAt', 'desc')
       .onSnapshot((snapshot) => {
-        const tweetArray = snapshot.docs.map((doc) => ({
+        const jsonArray = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
-        setTweets(tweetArray);
+        setJsons(jsonArray);
       });
   }, []);
 
   return (
-    <div className="container">
+    <div className="containerEditor">
+      <JsonEditor userObj={userObj} />
+
+      <h2 className="jsonHeader">Saved JSON</h2>
+
       <div style={{ marginTop: 30 }}>
-        {tweets.map((tweet) => ({
-          //todo add ui
-          /* <Tweet
-            key={tweet.id}
-            tweetObj={tweet}
-            isOwner={tweet.creatorId === userObj.uid}
-          /> */
-        }))}
+        {jsons.map((json) => (
+          <Json
+            key={json.id}
+            jsonObj={json}
+            isOwner={json.creatorId === userObj.uid}
+          />
+        ))}
       </div>
     </div>
   );

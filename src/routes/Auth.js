@@ -34,10 +34,12 @@ const Auth = () => {
         icon={faJsfiddle}
         color={'#04AAFF'}
         size="4x"
-        style={{ marginBottom: 30 }}
+        style={{ marginBottom: 20 }}
       />
+      <span style={{ marginBottom: 20, fontSize: 24 }}>JSONify</span>
 
       <AuthForm />
+
       <div className="authBtns">
         <button onClick={onSocialClick} name="google" className="authBtn">
           Continue with Google <FontAwesomeIcon icon={faGoogle} />

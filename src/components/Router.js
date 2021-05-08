@@ -10,6 +10,7 @@ const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
   return (
     <Router>
       {isLoggedIn && <Navigation userObj={userObj} />}
+
       <Switch>
         {isLoggedIn ? (
           <div
@@ -17,7 +18,7 @@ const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
               maxWidth: 890,
               width: '100%',
               margin: '0 auto',
-              marginTop: 80,
+              marginTop: 50,
               display: 'flex',
               justifyContent: 'center',
             }}

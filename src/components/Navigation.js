@@ -10,7 +10,10 @@ const Navigation = ({ userObj }) => {
       <ul style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
         <li>
           <Link to="/" style={{ marginRight: 10 }}>
-            <FontAwesomeIcon icon={faJsfiddle} color={'#04AAFF'} size="2x" />
+            <FontAwesomeIcon icon={faJsfiddle} color={'#04AAFF'} size="3x" />
+            <span style={{ marginTop: 5, display: 'flex', marginLeft: 5 }}>
+              Home
+            </span>
           </Link>
         </li>
 
@@ -18,15 +21,14 @@ const Navigation = ({ userObj }) => {
           <Link
             to="/profile"
             style={{
-              marginLeft: 10,
+              marginLeft: 30,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              fontSize: 12,
             }}
           >
-            <FontAwesomeIcon icon={faUser} color={'#04AAFF'} size="2x" />
-            <span style={{ marginTop: 10 }}>
+            <FontAwesomeIcon icon={faUser} color={'#04AAFF'} size="3x" />
+            <span style={{ marginTop: 6 }}>
               {userObj.displayName
                 ? `${userObj.displayName}'s Profile`
                 : 'Profile'}
