@@ -21,6 +21,7 @@ const Json = ({ jsonObj, isOwner }) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
     await dbService.doc(`jsons/${jsonObj.id}`).update({
       text: newJson,
     });
@@ -41,18 +42,20 @@ const Json = ({ jsonObj, isOwner }) => {
         <>
           {isOwner && (
             <>
-              <form onSubmit={onSubmit} className="container jsonEdit">
-                <input
+              <form onSubmit={onSubmit} className="containerEditor jsonEdit">
+                <textarea
                   type="text"
                   placeholder="Edit your Json"
                   value={newJson}
                   required
                   autoFocus
                   onChange={onChange}
-                  className="formInput"
+                  rows="15"
                 />
+
                 <input type="submit" value="Update Json" className="formBtn" />
               </form>
+
               <span onClick={toggleEditing} className="formBtn cancelBtn">
                 Cancel
               </span>
@@ -61,7 +64,9 @@ const Json = ({ jsonObj, isOwner }) => {
         </>
       ) : (
         <>
-          <h4>{jsonObj.text}</h4>
+          <textarea type="text" rows="15" readOnly>
+            {jsonObj.text}
+          </textarea>
 
           {jsonObj.attachmentUrl && (
             <img src={jsonObj.attachmentUrl} alt="attached pic" />
@@ -72,6 +77,7 @@ const Json = ({ jsonObj, isOwner }) => {
               <span onClick={onDeleteClick}>
                 <FontAwesomeIcon icon={faTrash} size="2x" />
               </span>
+
               <span onClick={toggleEditing}>
                 <FontAwesomeIcon icon={faPencilAlt} size="2x" />
               </span>

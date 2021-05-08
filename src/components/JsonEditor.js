@@ -61,7 +61,6 @@ const JsonFactory = ({ userObj }) => {
 
     const jsonObj = {
       text: JSON.stringify(editorRef.current.get(), null, 2),
-      // text: editorRef.current.getText(),
       createdAt: Date.now(),
       creatorId: userObj.uid,
       attachmentUrl,
@@ -74,13 +73,9 @@ const JsonFactory = ({ userObj }) => {
     setAttachment('');
   };
 
-  // const onChange = (event) => {
-  //   const {
-  //     target: { value },
-  //   } = event;
-
-  //   setJson(value);
-  // };
+  const onRefresh = () => {
+    window.location.reload();
+  };
 
   const onFileChange = (event) => {
     const {
@@ -116,15 +111,11 @@ const JsonFactory = ({ userObj }) => {
 
       <form onSubmit={onSubmit} className="factoryForm">
         <div className="factoryInput__container">
-          {/* <input
-            className="factoryInput__input"
-            value={json}
-            onChange={onChange}
-            type="text"
-            placeholder="Change this to JSON editor"
-            maxLength={120}
-          /> */}
-
+          <input
+            onClick={onRefresh}
+            value="New Random Data"
+            className="factoryInput__refresh"
+          />
           <input type="submit" value="Save" className="factoryInput__save" />
         </div>
 
