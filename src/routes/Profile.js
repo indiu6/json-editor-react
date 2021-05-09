@@ -15,15 +15,18 @@ const Profile = ({ userObj, refreshUser }) => {
     const {
       target: { value },
     } = event;
+
     setNewDisplayName(value);
   };
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
     if (userObj.displayName !== newDisplayName) {
       await userObj.updateProfile({
         displayName: newDisplayName,
       });
+
       refreshUser();
     }
   };
@@ -39,6 +42,7 @@ const Profile = ({ userObj, refreshUser }) => {
           value={newDisplayName}
           className="formInput"
         />
+
         <input
           type="submit"
           value="Update Profile"
@@ -48,6 +52,7 @@ const Profile = ({ userObj, refreshUser }) => {
           }}
         />
       </form>
+
       <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
         Log out
       </span>

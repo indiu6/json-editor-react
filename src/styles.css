@@ -263,8 +263,20 @@ form {
 
 .jsonHeader {
   text-align: center;
-  margin-top: 20px;
+  margin: 10px auto;
   font-size: large;
+  border-radius: 10px;
+  width: 100%;
+  padding: 12px 0px;
+  max-width: 150px;
+  background-color: lightgray;
+}
+
+.jsonNoSave {
+  text-align: center;
+  margin-top: 5px;
+  font-size: medium;
+  margin-bottom: 20px;
 }
 
 .jsonEdit .formBtn {

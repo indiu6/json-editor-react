@@ -92,13 +92,18 @@ const JsonFactory = ({ userObj }) => {
       } = finishedEvent;
 
       setAttachment(result);
+      console.log(result);
     };
+
+    // console.log(JSON.stringify(JSON.parse(aFile), null, 2));
+
+    // editorRef.current.set(JSON.parse(attachment));
   };
 
   const onClearAttachment = () => {
     setAttachment('');
 
-    let fileElement = document.getElementById('fileId');
+    let fileElement = document.getElementById('attachFile');
     fileElement.value = null;
   };
 
@@ -119,31 +124,31 @@ const JsonFactory = ({ userObj }) => {
           <input type="submit" value="Save" className="factoryInput__save" />
         </div>
 
-        <label htmlFor="attach-file" className="factoryInput__label">
-          <span style={{ fontSize: 15 }}>Add JSON files</span>
+        <label htmlFor="attachFile" className="factoryInput__label">
+          <span style={{ fontSize: 15 }}>Load JSON files</span>
           <FontAwesomeIcon icon={faPlus} />
         </label>
 
         <input
           type="file"
           accept=".json"
-          id="attach-file"
+          id="attachFile"
           onChange={onFileChange}
           style={{
             opacity: 0,
           }}
         />
 
+        {/* todo not photo but json */}
         {attachment && (
           <div className="factoryForm__attachment">
-            {/* todo not photo but json */}
-            <img
+            {/* <img
               src={attachment}
               alt="attached pic"
               style={{
                 backgroundImage: attachment,
               }}
-            />
+            /> */}
 
             <div className="factoryForm__clear" onClick={onClearAttachment}>
               <span>Remove</span>

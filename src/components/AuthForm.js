@@ -20,17 +20,11 @@ const AuthForm = () => {
     event.preventDefault();
 
     try {
-      let data;
-
       if (newAccount) {
-        data = await authService.createUserWithEmailAndPassword(
-          email,
-          password,
-        );
+        await authService.createUserWithEmailAndPassword(email, password);
       } else {
-        data = await authService.signInWithEmailAndPassword(email, password);
+        await authService.signInWithEmailAndPassword(email, password);
       }
-      console.log(data);
     } catch (error) {
       setError(error.message);
     }
@@ -68,6 +62,7 @@ const AuthForm = () => {
           className="authInput authSubmit"
           value={newAccount ? 'Create Account' : 'Log In'}
         />
+
         {error && <span className="authError">{error}</span>}
       </form>
 

@@ -28,15 +28,21 @@ const Home = ({ userObj }) => {
 
       <h2 className="jsonHeader">Saved JSON</h2>
 
-      <div style={{ marginTop: 30 }}>
-        {jsons.map((json) => (
-          <Json
-            key={json.id}
-            jsonObj={json}
-            isOwner={json.creatorId === userObj.uid}
-          />
-        ))}
-      </div>
+      {jsons.length > 0 ? (
+        <>
+          <div style={{ marginTop: 30 }}>
+            {jsons.map((json) => (
+              <Json
+                key={json.id}
+                jsonObj={json}
+                isOwner={json.creatorId === userObj.uid}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        <p className="jsonNoSave">No Saved Data</p>
+      )}
     </div>
   );
 };
