@@ -240,6 +240,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .factoryForm__attachment img {
@@ -249,14 +250,14 @@ form {
 }
 
 .factoryForm__clear {
-  color: #04aaff;
+  color: red;
   cursor: pointer;
   text-align: center;
 }
 
 .factoryForm__clear span {
   margin-right: 10px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* json */
@@ -265,11 +266,11 @@ form {
   text-align: center;
   margin: 10px auto;
   font-size: large;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100%;
   padding: 12px 0px;
   max-width: 150px;
-  background-color: lightgray;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .jsonNoSave {
