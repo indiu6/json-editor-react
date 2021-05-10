@@ -1,4 +1,4 @@
-# [JSONify](https://main.d3qhb7r1xj3quf.amplifyapp.com/)
+# [JSONify](https://indiu6.github.io/json-editor-react")
 
 built with React, Firebase, JSON Editor
  - API endpoints from https://random-data-api.com
@@ -6,9 +6,7 @@ built with React, Firebase, JSON Editor
 ## Summary
 
 - Design: [@fortawesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free) + CSS
-- Deployment: [AWS Amplify](https://aws.amazon.com/amplify)
-  > AWS Amplify is a set of tools and services that can be used together or on their own, 
-  to help front-end web and mobile developers build scalable full stack applications, powered by AWS.
+- Deployment: [Github Page](https://pages.github.com/)
 - Authentication: [Firebase Authentication](https://firebase.google.com/docs/auth)
   > Login or Register with email, Google or Github account
 - File Handling: [FileReader](https://developer.mozilla.org/en/docs/Web/API/FileReader)

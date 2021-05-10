@@ -10,8 +10,6 @@ import {
 
 import AuthForm from '../components/AuthForm';
 
-//todo once app is deployed by Amplify, change the config of OAuth url in Github?
-
 const Auth = () => {
   const onSocialClick = async (event) => {
     const {
