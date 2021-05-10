@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="containerEditor"
+  >
+    <div>
+      <div
+        class="jsoneditor-react-container"
+      >
+        <div
+          class="jsoneditor jsoneditor-mode-tree"
+        >
+          <div
+            class="jsoneditor-menu"
+          >
+            <button
+              class="jsoneditor-expand-all"
+              title="Expand all fields"
+              type="button"
+            />
+            <button
+              class="jsoneditor-collapse-all"
+              title="Collapse all fields"
+              type="button"
+            />
+            <button
+              class="jsoneditor-sort"
+              title="Sort contents"
+              type="button"
+            />
+            <button
+              class="jsoneditor-transform"
+              title="Filter, sort, or transform contents"
+              type="button"
+            />
+            <button
+              class="jsoneditor-undo jsoneditor-separator"
+              disabled=""
+              title="Undo last action (Ctrl+Z)"
+              type="button"
+            />
+            <button
+              class="jsoneditor-redo"
+              disabled=""
+              title="Redo (Ctrl+Shift+Z)"
+              type="button"
+            />
+            <div
+              class="jsoneditor-search"
+            >
+              <div
+                class="jsoneditor-results"
+              />
+              <div
+                class="jsoneditor-frame"
+                title="Search fields and values"
+              >
+                <button
+                  class="jsoneditor-refresh"
+                  type="button"
+                />
+                <input
+                  type="text"
+                />
+                <button
+                  class="jsoneditor-next"
+                  title="Next result (Enter)"
+                  type="button"
+                />
+                <button
+                  class="jsoneditor-previous"
+                  title="Previous result (Shift + Enter)"
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="jsoneditor-navigation-bar nav-bar-empty"
+          >
+            <div
+              class="jsoneditor-treepath"
+              tabindex="0"
+            >
+              Select a node...
+            </div>
+          </div>
+          <div
+            class="jsoneditor-outer has-main-menu-bar has-nav-bar"
+          >
+            <div
+              class="jsoneditor-tree"
+            >
+              <div
+                class="jsoneditor-tree-inner"
+              >
+                <table
+                  class="jsoneditor-tree"
+                >
+                  <colgroup>
+                    <col
+                      width="24px"
+                    />
+                    <col
+                      width="24px"
+                    />
+                    <col />
+                  </colgroup>
+                  <tbody />
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form
+        class="factoryForm"
+      >
+        <div
+          class="factoryInput__container"
+        >
+          <input
+            class="factoryInput__refresh"
+            value="New Random Data"
+          />
+          <input
+            class="factoryInput__save"
+            readonly=""
+            type="submit"
+            value="Save"
+          />
+        </div>
+        <label
+          class="factoryInput__label"
+          for="attachFile"
+        >
+          <span
+            style="font-size: 17px;"
+          >
+            Load JSON File
+          </span>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-plus fa-w-14 fa-lg "
+            data-icon="plus"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+              fill="currentColor"
+            />
+          </svg>
+        </label>
+        <input
+          accept=".json"
+          id="attachFile"
+          style="opacity: 0;"
+          type="file"
+        />
+      </form>
+    </div>
+    <h2
+      class="jsonHeader"
+    >
+      Saved JSON
+    </h2>
+    <p
+      class="jsonNoSave"
+    >
+      No Saved Data
+    </p>
+  </div>
+</DocumentFragment>
+`;

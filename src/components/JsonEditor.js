@@ -105,10 +105,15 @@ const JsonEditor = ({ userObj }) => {
         <div className="factoryInput__container">
           <input
             onClick={onRefresh}
-            value="New Random Data"
+            defaultValue="New Random Data"
             className="factoryInput__refresh"
           />
-          <input type="submit" value="Save" className="factoryInput__save" />
+          <input
+            type="submit"
+            value="Save"
+            readOnly
+            className="factoryInput__save"
+          />
         </div>
 
         <label htmlFor="attachFile" className="factoryInput__label">
