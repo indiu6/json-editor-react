@@ -7,6 +7,8 @@ built with React, Firebase, JSON Editor
 
 - Design: [@fortawesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free) + CSS
 - Deployment: [AWS Amplify](https://aws.amazon.com/amplify)
+  > AWS Amplify is a set of tools and services that can be used together or on their own, 
+  to help front-end web and mobile developers build scalable full stack applications, powered by AWS.
 - Authentication: [Firebase Authentication](https://firebase.google.com/docs/auth)
   > Login or Register with email, Google or Github account
 - File Handling: [FileReader](https://developer.mozilla.org/en/docs/Web/API/FileReader)
