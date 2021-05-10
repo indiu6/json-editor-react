@@ -1,19 +1,25 @@
 # JSONify
 
-built with React, Firebase
+built with React, Firebase, JSON Editor
+ - API endpoints from https://random-data-api.com
 
 ## Summary
 
-- Design: [@fortawesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free), CSS
+- Design: [@fortawesome](https://www.npmjs.com/package/@fortawesome/fontawesome-free) + CSS
 - Deployment: AWS Amplify
+  >
 - Authentication: Firebase Authentication
+  > Login or Register with email, Google or Github account
 - File Handling: [FileReader](https://developer.mozilla.org/en/docs/Web/API/FileReader)
-  > Load JSON file
+  > Load JSON file for editor (test using test.json file)
 - NoSQL Database: Firebase Firestore
+  > Create, Read, Update, Delete JSON data
 - JSON Tree: [JSON Editor](https://github.com/josdejong/jsoneditor)
+  > JSON Editor is a web-based tool to view, edit, format, and validate JSON.
 - Test Coverage:
+  >
 
-## If time permits..
+## If Time Permits..
 
 - Use Node.js and Express.js for server ENV and backend API
 - Use ORM like mongoose for MongoDB or sequelize for MySQL

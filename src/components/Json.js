@@ -11,8 +11,6 @@ const Json = ({ jsonObj, isOwner }) => {
     const ok = window.confirm('Are you sure to delete this json?');
     if (ok) {
       await dbService.doc(`jsons/${jsonObj.id}`).delete();
-      if (jsonObj.attachmentUrl !== '')
-        await storageService.refFromURL(jsonObj.attachmentUrl).delete();
     }
   };
 
@@ -68,11 +66,6 @@ const Json = ({ jsonObj, isOwner }) => {
           {isOwner && (
             <textarea type="text" rows="15" readOnly value={jsonObj.text} />
           )}
-
-          {/* todo not photo but json */}
-          {/* {jsonObj.attachmentUrl && (
-            <img src={jsonObj.attachmentUrl} alt="attached pic" />
-          )} */}
 
           {isOwner && (
             <div className="json__actions">

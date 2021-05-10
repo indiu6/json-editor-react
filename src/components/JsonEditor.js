@@ -1,6 +1,5 @@
-import { dbService, storageService } from '../myFirebase';
+import { dbService } from '../myFirebase';
 import React, { useState, useEffect, useRef } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
@@ -48,26 +47,14 @@ const JsonEditor = ({ userObj }) => {
     if (json === '') return;
     event.preventDefault();
 
-    // let attachmentUrl = '';
-    // if (attachment !== '') {
-    //   const attachmentRef = storageService
-    //     .ref()
-    //     .child(`${userObj.uid}/${uuidv4()}`);
-
-    //   const response = await attachmentRef.putString(attachment, 'data_url');
-    //   attachmentUrl = await response.ref.getDownloadURL();
-    // }
-
     const jsonObj = {
       text: JSON.stringify(editorRef.current.get(), null, 2),
       createdAt: Date.now(),
       creatorId: userObj.uid,
-      // attachmentUrl,
     };
 
     await dbService.collection('jsons').add(jsonObj);
 
-    // setJson('');
     alert('JSON data is saved');
     setAttachment('');
   };
@@ -87,17 +74,6 @@ const JsonEditor = ({ userObj }) => {
       alert('The file is not JSON format');
       return;
     }
-
-    //todo use this to export json file?
-    // const reader = new FileReader();
-    // reader.readAsDataURL(aFile);
-    // reader.onloadend = (finishedEvent) => {
-    //   const {
-    //     currentTarget: { result },
-    //   } = finishedEvent;
-
-    //   setAttachment(result);
-    // };
 
     const readerText = new FileReader();
     readerText.readAsText(aFile);
@@ -152,10 +128,6 @@ const JsonEditor = ({ userObj }) => {
 
         {attachment && (
           <div className="factoryForm__attachment">
-            {/* <a href={attachment} download="file_name.json">
-              download_button
-            </a> */}
-
             <div className="factoryForm__clear" onClick={onClearAttachment}>
               <span>Remove</span>
               <FontAwesomeIcon icon={faTimes} />
