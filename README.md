@@ -1,4 +1,4 @@
-# [JSONify](https://indiu6.github.io/json-editor-react/#/")
+# [JSONify](https://indiu6.github.io/json-editor-react/#/)
 
 built with React, Firebase, JSON Editor
  - API endpoints from https://random-data-api.com
