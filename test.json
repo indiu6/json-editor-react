@@ -1,0 +1,39 @@
+{
+  "id": 16,
+  "uid": "f32296fc-00b9-4567-acaf-d54ef2a71318",
+  "password": "6958cfsF4Y",
+  "first_name": "Setsuko",
+  "last_name": "Schuster",
+  "username": "setsuko.schuster",
+  "email": "setsuko.schuster@email.com",
+  "avatar": "https://robohash.org/quaepariaturaperiam.png?size=300x300&set=set1",
+  "gender": "Male",
+  "phone_number": "+503 296-773-8856",
+  "social_insurance_number": "312945959",
+  "date_of_birth": "1983-09-06",
+  "employment": {
+    "title": "Community-Services Director",
+    "key_skill": "Work under pressure"
+  },
+  "address": {
+    "city": "West Giuseppe",
+    "street_name": "Nolan Corners",
+    "street_address": "651 Everette Rapids",
+    "zip_code": "22843-5450",
+    "state": "Vermont",
+    "country": "United States",
+    "coordinates": {
+      "lat": -59.67211871962689,
+      "lng": 36.10833095548844
+    }
+  },
+  "credit_card": {
+    "cc_number": "4385925584253"
+  },
+  "subscription": {
+    "plan": "Starter",
+    "status": "Idle",
+    "payment_method": "Google Pay",
+    "term": "Monthly"
+  }
+}
