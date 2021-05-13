@@ -27,3 +27,4 @@ built with React, Firebase, JSON Editor
 - Use ORM like mongoose for MongoDB or sequelize for MySQL
 - Use Material-UI for better design on button, modal, dialog, input, and loading.
 - Export edited JSON file
+- More tests
