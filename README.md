@@ -1,7 +1,8 @@
 # [JSONify](https://indiu6.github.io/json-editor-react/#/)
 
 built with React, Firebase, JSON Editor
- - API endpoints from https://random-data-api.com
+
+- API endpoints from https://random-data-api.com
 
 ## Summary
 
@@ -20,6 +21,7 @@ built with React, Firebase, JSON Editor
   ```
   npm test -- --coverage
   ```
+- Google Analytics
 
 ## If Time Permits..
 
