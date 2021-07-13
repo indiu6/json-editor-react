@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { dbService } from '../myFirebase';
+import { dbService, analytics } from '../myFirebase';
 
 import JsonEditor from '../components/JsonEditor';
 import Json from '../components/Json';
@@ -19,6 +19,8 @@ const Home = ({ userObj }) => {
 
         setJsons(jsonArray);
       });
+
+    analytics.logEvent('notification_received');
   }, []);
 
   return (
